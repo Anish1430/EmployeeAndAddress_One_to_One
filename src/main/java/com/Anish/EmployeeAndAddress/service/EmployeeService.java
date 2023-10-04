@@ -35,4 +35,8 @@ public class EmployeeService {
             return employeeRepo.save(employee);
         }).orElseThrow(() -> new NoSuchElementException("Not found"));
     }
+
+    public void deleteEmployee(Long id) {
+        employeeRepo.deleteById(id);
+    }
 }
